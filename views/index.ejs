@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <table>
+        <thead>
+            <tr>
+                <th> # </th>
+                <th>Lieu de la mesure</th>
+                <th>Température</th>
+                <th>Date de la mesure</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% mesures.forEach(function(mesure){ %>
+            <tr>
+                <td></td>
+                <td><%= mesure.location %></td>
+                <td><%= mesure.value %></td>
+                <td><%= mesure.date %></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+  </body>
+</html>
